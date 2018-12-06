@@ -1,0 +1,28 @@
+{
+    "name": "yansongda/rate-limit-bundle",
+    "description": "symfony 限流",
+    "keywords": ["symfony", "rate-limit", "throttle", "bundle"],
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "yansongda",
+            "email": "me@yansongda.cn"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "symfony/framework-bundle": "^4.0",
+        "sensio/framework-extra-bundle": "^5.2",
+        "snc/redis-bundle": "^2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Yansongda\\RateLimitBundle\\": "src"
+        }
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^4.2",
+        "predis/predis": "^1.1"
+    }
+}
