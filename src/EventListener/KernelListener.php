@@ -55,11 +55,11 @@ class KernelListener implements EventSubscriberInterface
     {
         return [
             KernelEvents::CONTROLLER => [
-                ['throttle', -1]
+                ['throttle', -1],
             ],
             KernelEvents::RESPONSE => [
-                ['addThrottleHeader', 0]
-            ]
+                ['addThrottleHeader', 0],
+            ],
         ];
     }
 
@@ -138,10 +138,10 @@ class KernelListener implements EventSubscriberInterface
      * @author yansongda <me@yansongda.cn>
      *
      * @param Throttle $throttle
-     *
      * @param Request  $request
      *
      * @throws InvalidParamsException
+     *
      * @return array
      */
     public function getLimitPeriod(Throttle $throttle, Request $request): array
@@ -160,7 +160,7 @@ class KernelListener implements EventSubscriberInterface
             throw new InvalidParamsException("[Yansongda-Rate-Limit-Bundle] Class [{$class}] Not Exist");
         }
 
-        $custom = new $class;
+        $custom = new $class();
 
         if (!method_exists($custom, $method)) {
             throw new InvalidParamsException("[Yansongda-Rate-Limit-Bundle] Method [{$method}] Not Exist");
@@ -181,7 +181,7 @@ class KernelListener implements EventSubscriberInterface
      *
      * @author yansongda <me@yansongda.cn>
      *
-     * @param Request    $request
+     * @param Request $request
      *
      * @return Throttle|null
      */

@@ -220,6 +220,7 @@ class Throttle extends ConfigurationAnnotation
      * toArray.
      *
      * @author yansongda <me@yansongda.cn>
+     *
      * @throws \ReflectionException
      *
      * @return array
