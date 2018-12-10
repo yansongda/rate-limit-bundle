@@ -48,6 +48,7 @@ class Configuration implements ConfigurationInterface
                             if ($item && !is_subclass_of($item, '\Exception')) {
                                 throw new InvalidConfigException("[{$item}] Must Be Instanceof \Exception");
                             }
+
                             return $item;
                         })->end()
                     ->end()->end()->end();

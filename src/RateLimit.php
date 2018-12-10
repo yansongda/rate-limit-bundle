@@ -36,9 +36,9 @@ class RateLimit
      * @var array
      */
     protected $info = [
-        'limit' => 60,
-        'period' => 60,
-        'count' => 0,
+        'limit'      => 60,
+        'period'     => 60,
+        'count'      => 0,
         'reset_time' => 0,
     ];
 

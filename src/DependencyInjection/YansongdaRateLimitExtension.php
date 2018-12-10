@@ -29,7 +29,7 @@ class YansongdaRateLimitExtension extends Extension
         $container->setParameter('yansongda_rate_limit.display_headers', $config['display_headers']);
         $container->setParameter('yansongda_rate_limit.headers', $config['headers']);
 
-        $loader = new XmlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
+        $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
 
         $container->getDefinition('yansongda_rate_limit.kernel')->replaceArgument(
